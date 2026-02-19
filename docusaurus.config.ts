@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://github.com/Chris1234567899',
+  url: 'https://Chris1234567899.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/geofarmer_docs/',
@@ -31,7 +31,7 @@ const config: Config = {
  // Important for GitHub Pages:
   trailingSlash: false,
 
-  
+
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
