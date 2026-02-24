@@ -1,48 +1,6 @@
 ---
-title: Architecture - Level 1 and 2
-description: C4-style architecture documentation based on the current GeoFarmer landscape
+title: "Level 2: Containers"
 ---
-
-# GeoFarmer Architecture (Level 1 and 2)
-
-This document captures the architecture from the shared diagram using two views:
-
-- Level 1: System Context
-- Level 2: Container View
-
-## Level 1 - System Context
-
-```mermaid
-flowchart LR
-  Admin[Operations / Admin User]
-  Field[Field User]
-
-  Geo[GeoFarmer Platform]
-
-  Postgres[(PostgreSQL)]
-  S3[File Storage<br/>Amazon S3]
-  SMTP[SMTP]
-  Twilio[SMS<br/>Twilio]
-  Compress[File Compression<br/>Lambda / Flask]
-  Besu[Blockchain<br/>Ethereum Besu]
-  Monitoring[Monitoring]
-  Registry[Docker Container Registry]
-
-  Admin --> Geo
-  Field --> Geo
-
-  Geo --> Postgres
-  Geo --> S3
-  Geo --> SMTP
-  Geo --> Twilio
-  Geo --> Compress
-  Geo --> Besu
-
-  Monitoring -. observes .-> Geo
-  Registry -. provides images .-> Geo
-```
-
-## Level 2 - Container View
 
 ```mermaid
 flowchart LR
@@ -125,8 +83,3 @@ flowchart LR
   Registry -. deploys .-> Worker
   Monitoring -. observes .-> Geo
 ```
-
-## Notes
-
-- Level 1 shows GeoFarmer as one single system and only external actors/systems.
-- Level 2 decomposes GeoFarmer into containers and keeps external dependencies around it.
