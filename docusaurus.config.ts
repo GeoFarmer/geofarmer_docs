@@ -15,14 +15,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://Chris1234567899.github.io',
+  url: 'https://GeoFarmer.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/geofarmer_docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Chris1234567899', // Usually your GitHub org/user name.
+  organizationName: 'GeoFarmer', // Usually your GitHub org/user name.
   projectName: 'geofarmer_docs', // Usually your repo name.
 
 
@@ -52,6 +52,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: 'docs',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -114,7 +115,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/architecture',
             },
           ],
         },
